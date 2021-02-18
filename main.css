@@ -4,6 +4,7 @@
     user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
+    -ms-touch-select: none;
 }
 
 body header {
