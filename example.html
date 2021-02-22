@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+    var dados;
 
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
@@ -46,7 +47,11 @@
       console.log('Successful login for: ' + response.name + response.adaccounts.data[1]);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.adaccounts[1] + '!';
-    });
+    })
+    .then (data => {
+    dados = data;
+    baseMath()
+  });;
   }
 
 </script>
