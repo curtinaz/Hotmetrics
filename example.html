@@ -46,7 +46,7 @@
     FB.api('/me?fields=id,name,adaccounts', function(response) {
       console.log('Successful login for: ' + response.name + response.adaccounts.data[1]);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.adaccounts[1] + '!';
+        'Thanks for logging in, ' + response.name + '!';
     })
   }
 
