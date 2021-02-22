@@ -50,7 +50,7 @@
       document.getElementById('status').innerHTML =
         'Seja bem vindo, ' + response.name + '!';
         document.getElementById('account1').innerHTML =
-        'Sua conta ' + response.name + '!';
+        'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + response.adaccounts.data[2].balance;
     })
   }
 
