@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="./main.css">
 
 <script>
-var dados;
-
-  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-    console.log('statusChangeCallback');
-    console.log(response);                   // The current login status of the person.
-    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-      testAPI();  
-    } else {                                 // Not logged into your webpage or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Por favor, ' +
-        'entre em sua conta.';
-    }
-  }
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '434762571183843',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v9.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     
 
 </head>
