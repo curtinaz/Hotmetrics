@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
 
 app.get('/', function (req, res) {
-  res.send("teste")
+  res.send("Você não tem permissão para acessar este domínio")
 })
 
 app.post('/webhook', function (req, res) {
