@@ -16,6 +16,7 @@ app.get('/', function (req, res) {
   res.send("Você não tem permissão para acessar este domínio")
 })
 
+
 app.post('/webhook', function (req, res) {
   const body = req.body
   var data = "," + "\n" +JSON.stringify(body)
