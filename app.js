@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
 
 app.get('/', function (req, res) {
-  res.render()
+  res.render('./views/index.html')
 })
 
 // WEBHOOK DE TESTE
