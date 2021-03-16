@@ -36,5 +36,5 @@ app.listen(37037, function (err) {
     throw err
   }
 
-  console.log('Server started on port 37037')
+  console.log('server running on port 37037')
 });
