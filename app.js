@@ -30,7 +30,7 @@ app.post('/webhook', function (req, res) {
   });
 })
 
-// Tell our app to listen on port 3000
+// Faz o app rodar na porta 3000
 app.listen(3000, function (err) {
   if (err) {
     throw err
