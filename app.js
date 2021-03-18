@@ -8,6 +8,8 @@ const app = express()
 
 app.use(express.static(__dirname + '/public'));
 
+// define o html a engine padrão do sistema
+
 // Tell express to use the body-parser middleware and to not parse extended bodies
 app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
