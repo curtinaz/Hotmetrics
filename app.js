@@ -9,7 +9,10 @@ const app = express()
 app.use(express.static(__dirname + '/public'));
 
 // define o html a engine padrão do sistema
-app.set('views', __dirname + '/views'); 
+var engines = require('consolidate');
+
+app.set('views', __dirname + '/views');
+app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 
 // Tell express to use the body-parser middleware and to not parse extended bodies
