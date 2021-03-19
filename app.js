@@ -6,9 +6,10 @@ const moment = require('moment');
 // Create a new instance of express
 const app = express()
 
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 // define o html a engine padrão do sistema
+app.set('views', __dirname + '/views'); 
 app.set('view engine', 'html');
 
 // Tell express to use the body-parser middleware and to not parse extended bodies
