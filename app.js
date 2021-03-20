@@ -9,18 +9,14 @@ const app = express()
 app.use(express.static(__dirname + '/public'));
 
 // define o html a engine padrão do sistema
-var engines = require('consolidate');
 
-app.set('views', __dirname + '/views');
-app.engine('html', engines.mustache);
-app.set('view engine', 'html');
 
 // Tell express to use the body-parser middleware and to not parse extended bodies
 app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
 
 app.get('/', function (req, res) {
-  res.render('./views/index.html')
+  res.render('./public/index.html')
 })
 
 // WEBHOOK DE TESTE
