@@ -13,6 +13,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
 
+
+// 
 app.get('/', function (req, res) {
   res.render('./public/index.html')
 })
