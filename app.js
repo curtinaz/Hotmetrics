@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // Route that receives a POST request to /sms
 
 
-// 
+// Página principal da Hotmetrics
 app.get('/', function (req, res) {
   res.render('./public/index.html')
 })
