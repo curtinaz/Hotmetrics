@@ -19,6 +19,11 @@ app.get('/', function (req, res) {
   res.render('./public/index.html')
 })
 
+// Página principal da Hotmetrics
+app.get('/', function (req, res) {
+  res.render('./public/index.html')
+})
+
 // WEBHOOK DE TESTE
 app.post('/webhook', function (req, res) {
   const body = req.body
