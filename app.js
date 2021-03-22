@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
   res.render('./public/index.html')
 })
 
-// Página principal da Hotmetrics
+// Página de exemplo da Hotmetrics
 app.get('/ex', function (req, res) {
   res.render('./public/example.html')
 })
