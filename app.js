@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 // Página de exemplo da Hotmetrics
 app.get('/example', function (req, res) {
-  res.render('./public/example.html')
+  res.render('/example.html')
 })
 
 // WEBHOOK DE TESTE
