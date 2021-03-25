@@ -51,7 +51,7 @@
         'Seja bem vindo, ' + response.name + '!';
 
         var accounts_qtd = 0;
-        accounts_qtd = response.adaccounts.data.lenght;
+        accounts_qtd = (response.adaccounts.data).lenght;
         console.log(accounts_qtd)
 
         document.getElementById('account1').innerHTML =
