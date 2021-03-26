@@ -51,7 +51,7 @@
         'Seja bem vindo, ' + response.name + '!';
 
         var accounts_qtd = 0;
-        console.log(dados.adaccounts.data.lenght)
+        console.log(response.dados.adaccounts.data.lenght)
 
         document.getElementById('account1').innerHTML =
         'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + response.adaccounts.data[2].balance;
