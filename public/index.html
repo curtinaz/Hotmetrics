@@ -9,14 +9,12 @@
 
 // PARTE DA HOTMART
 
-var hotmart;
-
 fetch('./message.json')
   .then(response => {
       return response.json();
   })
   .then (data => {
-    hotmart = data;
+    var hotmart = data;
     console.log(hotmart)
   });
 
