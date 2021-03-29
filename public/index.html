@@ -61,7 +61,7 @@ fetch('./message.json')
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=id,name,adaccounts.limit(10){balance,name}', function(response) {
+    FB.api('/me?fields=id,name,adaccounts.limit(10){balance,name,amount_spent}', function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response)
       document.getElementById('status').innerHTML =
