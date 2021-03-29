@@ -74,7 +74,7 @@ fetch('./message.json')
         var gasto = response.adaccounts.data[2].amount_spent;
 
         document.getElementById('account1').innerHTML =
-        'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + gasto.toFixed(2) ;
+        'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + gasto;
     })
   }
 
