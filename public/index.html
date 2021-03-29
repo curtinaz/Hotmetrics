@@ -71,10 +71,8 @@ fetch('./message.json')
         console.log(response.adaccounts.data.length)
         accounts_qtd = response.adaccounts.data.length;
 
-        var gasto = response.adaccounts.data[2].amount_spent;
-
         document.getElementById('account1').innerHTML =
-        'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + gasto;
+        'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + response.adaccounts.data[2].amount_spent;
     })
   }
 
