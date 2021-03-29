@@ -17,9 +17,10 @@ fetch('./message.json')
   })
   .then (data => {
     hotmart = data;
+    console.log(hotmart)
   });
 
-  console.log(hotmart)
+  
 
 // PARTE DO FACEBOOK
 
@@ -70,6 +71,7 @@ fetch('./message.json')
 
         var accounts_qtd = 0;
         console.log(response.adaccounts.data.length)
+        accounts_qtd = response.adaccounts.data.length;
 
         document.getElementById('account1').innerHTML =
         'Sua conta ' + response.adaccounts.data[2].name + ' já gastou R$' + response.adaccounts.data[2].balance;
