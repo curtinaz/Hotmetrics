@@ -71,6 +71,9 @@ fetch('./message.json')
         console.log(response.adaccounts.data.length)
         accounts_qtd = response.adaccounts.data.length;
 
+        for (var i=0; i <= accounts_qtd; i++) {
+          console.log(i)
+        }
 
         document.getElementById('account1').innerHTML =
         'Sua conta ' + response.adaccounts.data[3].name + ' já gastou R$' + response.adaccounts.data[3].amount_spent+',27';
