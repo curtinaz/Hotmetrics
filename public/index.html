@@ -71,14 +71,17 @@ fetch('./message.json')
         console.log(response.adaccounts.data.length)
         accounts_qtd = response.adaccounts.data.length;
 
-        for (var i=0; i <= accounts_qtd; i++) {
-          var divNova = document.createElement("div");
-          var conteudoNovo = document.createTextNode("Olá, cumprimentos!");
-          divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada
+        for (var i=0; i <= response.adaccounts.data.length; i++) {
 
-          // adiciona o novo elemento criado e seu conteúdo ao DOM
-          var divAtual = document.getElementById("div1");
-          document.body.insertBefore(divNova, account1);
+
+          
+          // var divNova = document.createElement("div");
+          // var conteudoNovo = document.createTextNode("Olá, cumprimentos!");
+          // divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada
+
+          // // adiciona o novo elemento criado e seu conteúdo ao DOM
+          // var divAtual = document.getElementById("div1");
+          // document.body.insertBefore(divNova, account1);
         }
 
         document.getElementById('account1').innerHTML =
