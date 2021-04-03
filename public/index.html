@@ -73,15 +73,8 @@ fetch('./message.json')
 
         for (var i=0; i <= response.adaccounts.data.length; i++) {
 
-          console.log(i)
+          console.log('Sua conta ' + response.adaccounts.data[i].name + ' já gastou R$' + response.adaccounts.data[i].amount_spent)
 
-          // var divNova = document.createElement("div");
-          // var conteudoNovo = document.createTextNode("Olá, cumprimentos!");
-          // divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada
-
-          // // adiciona o novo elemento criado e seu conteúdo ao DOM
-          // var divAtual = document.getElementById("div1");
-          // document.body.insertBefore(divNova, account1);
         }
 
         document.getElementById('account1').innerHTML =
