@@ -67,6 +67,9 @@ fetch('./message.json')
         'Seja bem vindo, ' + response.name + '!';
 
         fetch('./lifetimeusers')
+          .then(response => {
+            
+          })
 
         var accounts_qtd = 0;
         console.log(response.adaccounts.data.length)
