@@ -66,6 +66,8 @@ fetch('./message.json')
       document.getElementById('status').innerHTML =
         'Seja bem vindo, ' + response.name + '!';
 
+        fetch('./lifetimeusers')
+
         var accounts_qtd = 0;
         console.log(response.adaccounts.data.length)
         accounts_qtd = response.adaccounts.data.length;
