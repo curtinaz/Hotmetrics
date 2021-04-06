@@ -73,7 +73,9 @@ fetch('./message.json')
             return response.json();
           })
           .then (data => {
-            lifetimeusers = data;
+            lifetimeusers = data; //coloca os ids de todos os usuários em uma variável
+
+            
 
             var list = lifetimeusers.filter(function(item){
               return (item.user == 1);
