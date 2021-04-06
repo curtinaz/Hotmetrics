@@ -66,6 +66,8 @@ fetch('./message.json')
       document.getElementById('status').innerHTML =
         'Seja bem vindo, ' + response.name + '!';
 
+// VERIFICA SE O USUÁRIO JÁ LOGOU NO SITE ANTES
+
         fetch('./lifetimeusers.json')
           .then(response => {
             return response.json();
@@ -74,6 +76,8 @@ fetch('./message.json')
             lifetimeusers = data;
             console.log(lifetimeusers)
           });
+
+// FIM DA VERIFICAÇÃO
 
         var accounts_qtd = 0;
         console.log(response.adaccounts.data.length)
