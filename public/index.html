@@ -66,6 +66,8 @@ fetch('./message.json')
       document.getElementById('status').innerHTML =
         'Seja bem vindo, ' + response.name + '!';
 
+        dados = data;
+
 // VERIFICA SE O USUÁRIO JÁ LOGOU NO SITE ANTES
 
         fetch('./lifetimeusers.json')
