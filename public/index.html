@@ -62,14 +62,12 @@ fetch('./message.json')
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me?fields=id,name,adaccounts.limit(40){balance,name,amount_spent}', function(response) {
       console.log('Successful login for: ' + response.name)
-      .then (data => {
-        dados = data;
-      });
+
       console.log(response)
       document.getElementById('status').innerHTML =
         'Seja bem vindo, ' + response.name + '!';
 
-        dados = data;
+        dados = response;
 
 // VERIFICA SE O USUÁRIO JÁ LOGOU NO SITE ANTES
 
