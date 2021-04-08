@@ -84,6 +84,11 @@ fetch('./message.json')
               return (item.user == dados.id);
               console.log(list.length)
             });
+
+            if (list.length == 0) {
+              console.log("criar conta do usuario")
+            }
+
             console.log(list.length)
             console.log(lifetimeusers)
           });
