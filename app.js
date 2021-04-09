@@ -44,6 +44,8 @@ app.post('/webhooks', function (req, res) {
   var data = "," + "\n" +JSON.stringify(body)
   res.set('Content-Type', 'text/plain');
   res.send(data);
+  
+  console.log(data);
 
 })
 
