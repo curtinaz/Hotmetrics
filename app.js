@@ -46,7 +46,10 @@ app.post('/webhooks', function (req, res) {
   res.send(data);
   
   console.log(data);
-
+  
+  fs.appendFile(`./public/message.json`, data, function (err) {
+    if (err) throw err;
+  });
 })
 
 // Faz o app rodar na porta 3000
