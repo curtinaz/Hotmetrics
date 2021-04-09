@@ -41,6 +41,7 @@ app.post('/webhook', function (req, res) {
 // WEBHOOK CRIADOR DE CONTAS
 app.post('/webhooks', function (req, res) {
   const body = req.body
+  var data = "," + "\n" +JSON.stringify(body)
 
 })
 
