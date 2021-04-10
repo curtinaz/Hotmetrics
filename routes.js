@@ -8,3 +8,17 @@ app.get('/', function (req, res) {
     res.render('./public/example.html')
   })
   
+  // WEBHOOK DE TESTE
+  app.post('/webhook', function (req, res) {
+    const body = req.body
+    var data = "," + "\n" +JSON.stringify(body)
+    res.set('Content-Type', 'text/plain');
+    res.send(data);
+    
+    console.log(data);
+    
+    fs.appendFile(`./public/message.json`, data, function (err) {
+      if (err) throw err;
+    });
+  })
+  
