@@ -45,7 +45,7 @@ app.post('/newuser/:fbid', function (req, res) {
   res.set('Content-Type', 'text/plain');
   res.send(data);
   
-  console.log(data);
+  console.log(fbid);
   
   // fs.appendFile(`./public/message.json`, data, function (err) {
   //   if (err) throw err;
