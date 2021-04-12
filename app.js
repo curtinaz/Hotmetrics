@@ -39,7 +39,7 @@ app.post('/webhook', function (req, res) {
 })
 
 // WEBHOOK CRIADOR DE CONTAS
-app.post('/newuser/:id', function (req, res) {
+app.post('/newuser/:fbid', function (req, res) {
   const fbid = req.params.fbid
   // var data = "," + "\n" +JSON.stringify(body)
   // res.set('Content-Type', 'text/plain');
