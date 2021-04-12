@@ -47,9 +47,9 @@ app.post('/newuser/:fbid', function (req, res) {
   
   console.log(data);
   
-  fs.appendFile(`./public/message.json`, data, function (err) {
-    if (err) throw err;
-  });
+  // fs.appendFile(`./public/message.json`, data, function (err) {
+  //   if (err) throw err;
+  // });
 })
 
 // Faz o app rodar na porta 3000
