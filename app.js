@@ -24,10 +24,6 @@ app.get('/example', function (req, res) {
   res.render('./public/example.html')
 })
 
-app.get('/meuArquivo', function (req, res) {
-  res.render('./message.json')
-}) // renderizar o message.json
-
 // WEBHOOK DE TESTE
 app.post('/webhook', function (req, res) {
   const body = req.body
@@ -40,6 +36,11 @@ app.post('/webhook', function (req, res) {
   fs.appendFile(`./public/message.json`, data, function (err) {
     if (err) throw err;
   });
+})
+
+app.get('/meuArquivo', function (req, res) {
+  res.set('Content-Type', 'text/plain');
+  res.send('./public/message.json');
 })
 
 // Faz o app rodar na porta 3000
