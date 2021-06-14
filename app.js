@@ -38,7 +38,7 @@ app.post('/webhook', function (req, res) {
   });
 })
 
-var mineArch = path.join(__dirname, 'message.json');
+var mineArch = path.join(__dirname, './public/message.json');
 app.get('/meuArquivo', function (req, res) {
   res.set('Content-Type', 'text/plain');
   var readable = fs.createReadStream(mineArch);
