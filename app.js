@@ -43,7 +43,7 @@ app.get('/meuArquivo', function (req, res) {
   var data = fs.open(`./public/message.json`, function (err) {
     if (err) throw err;
   });
-  res.json(data);
+  res.render(data);
 })
 
 // Faz o app rodar na porta 3000
