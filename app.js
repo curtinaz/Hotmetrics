@@ -56,7 +56,7 @@ app.get('./newuser/:fbid', function (req, res) {
 // Faz o app rodar na porta 3000
 
 // var port_number = server.listen(process.env.PORT || 3000);
-app.listen(3000);
+app.listen(process.env.PORT);
 console.log('server is running on port 3000')
 
 // app.listen(3000, function (err) {
