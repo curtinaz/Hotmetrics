@@ -38,9 +38,11 @@ app.post('/webhook', function (req, res) {
   });
 })
 
+var mineArch = path.join(__dirname, 'message.json');
 app.get('/meuArquivo', function (req, res) {
   res.set('Content-Type', 'text/plain');
-  res.send('./public/message.json');
+  var readable = fs.createReadStream(mineArch);
+  readable.pipe(res);
 })
 
 // Faz o app rodar na porta 3000
