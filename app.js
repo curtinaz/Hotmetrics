@@ -38,21 +38,6 @@ app.post('/webhook', function (req, res) {
   });
 })
 
-// WEBHOOK CRIADOR DE CONTAS
-app.get('./newuser/:fbid', function (req, res) {
-  const fbid = req.params.fbid
-  // var data = "," + "\n" +JSON.stringify(body)
-  // res.set('Content-Type', 'text/plain');
-  // res.send(data);
-  
-  res.send(fbid)
-  console.log(fbid);
-  
-  // fs.appendFile(`./public/message.json`, data, function (err) {
-  //   if (err) throw err;
-  // });
-})
-
 // Faz o app rodar na porta 3000
 
 // var port_number = server.listen(process.env.PORT || 3000);
