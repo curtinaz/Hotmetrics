@@ -24,6 +24,10 @@ app.get('/example', function (req, res) {
   res.render('./public/example.html')
 })
 
+app.get('/meuArquivo', function (req, res) {
+  res.render('./message.json')
+}) // renderizar o message.json
+
 // WEBHOOK DE TESTE
 app.post('/webhook', function (req, res) {
   const body = req.body
