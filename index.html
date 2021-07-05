@@ -49,7 +49,7 @@ fetch('./message.json')
       appId      : '249704126803405',
       cookie     : true,                     // Enable cookies to allow the server to access the session.
       xfbml      : true,                     // Parse social plugins on this webpage.
-      version    : 'v9.0'           // Use this Graph API version for this call.
+      version    : 'v11.0'           // Use this Graph API version for this call.
     });
 
 
@@ -59,8 +59,7 @@ fetch('./message.json')
   };
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=id,name,adaccounts.limit(40){balance,name,amount_spent}', function(response) {
+    FB.api('/me?fields=id,name,adaccounts.limit(40){balance,name,amount_spent,day}', function(response) {
       console.log('Successful login for: ' + response.name)
 
       console.log(response)
@@ -68,32 +67,6 @@ fetch('./message.json')
         'Seja bem vindo, ' + response.name + '!';
 
         dados = response;
-
-// VERIFICA SE O USUÁRIO JÁ LOGOU NO SITE ANTES
-
-        fetch('./lifetimeusers.json')
-          .then(response => {
-            return response.json();
-          })
-          .then (data => {
-            lifetimeusers = data; //coloca os ids de todos os usuários que já logaram no site em uma variável
-
-            
-
-            var list = lifetimeusers.filter(function(item){
-              return (item.user == dados.id);
-              console.log(list.length)
-            });
-
-            if (list.length == 0) {
-              console.log("criar conta do usuario")
-            } else {
-              console.log("usuario já tem conta")
-            }
-
-            console.log(list.length)
-            console.log(lifetimeusers)
-          });
 
 // FIM DA VERIFICAÇÃO
 
