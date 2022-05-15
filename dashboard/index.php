@@ -9,4 +9,5 @@ if (empty($_COOKIE['token'])) {
 // Verifica se o usuário possui fbtoken
 if (empty($_COOKIE['fbtoken'])) {
     require './views/page__login.php';
+    die();
 }
